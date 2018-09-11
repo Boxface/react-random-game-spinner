@@ -87,14 +87,19 @@
 .Spinner-dial {
   background-color: white;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 50% 50% 5% 5%;
   color: black;
-  padding: 5px;
+  padding: 1px;
   position: absolute;
-  left: 130px;
-  top: 138px;
+  left: 135px;
+  top: 125px;
   transition: all 6s;
   z-index: 2;
+}
+
+.Spinner-dial p {
+  font-size: 0.8em;
+  padding: 0;
 }
 .Spinner-button button {
   background-color: white;

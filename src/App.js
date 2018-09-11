@@ -24,7 +24,7 @@ class App extends Component {
                   <div className = "Spinner-inner-segment">Golf With Your Friends</div>
                 </div>
             </div>
-            <div className = "Spinner-dial" id="Spinner-dial">Spin</div>
+            <div className = "Spinner-dial" id="Spinner-dial"><p>Spin</p></div>
           </div>
         </div>
         <div className="Spinner-button">
@@ -33,8 +33,9 @@ class App extends Component {
       </div>
     );
     function spin() {
-      var totalDegrees = 1800;
-      var spinDegrees = Math.random()*totalDegrees;
+      var totalDegrees = 2880;
+      var spinDegrees = totalDegrees + (Math.random()*totalDegrees);
+      console.log(spinDegrees);
 
       var wheel = document.getElementById('Spinner-dial');
       wheel.style.transform = 'rotate(' + spinDegrees + 'deg)';
