@@ -34,10 +34,10 @@ class App extends Component {
     );
     function spin() {
       var totalDegrees = 1800;
-      var spinDegrees = Math.floor()
+      var spinDegrees = Math.random()*totalDegrees;
 
       var wheel = document.getElementById('Spinner-dial');
-      wheel.style.transform = 'rotate(900deg)';
+      wheel.style.transform = 'rotate(' + spinDegrees + 'deg)';
       console.log('All working ok');
     };
   }
