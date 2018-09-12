@@ -33,8 +33,8 @@ class App extends Component {
       </div>
     );
     function spin() {
-      var totalDegrees = 2880;
-      var spinDegrees = totalDegrees + (Math.random()*totalDegrees);
+      var totalDegrees = 7200;
+      var spinDegrees =+ (Math.random() * (totalDegrees - 1 + 1) + 1);
       console.log(spinDegrees);
 
       var wheel = document.getElementById('Spinner-dial');
