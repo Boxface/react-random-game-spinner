@@ -1,47 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">What do you want to play?</h1>
-        </header>
-        <div className="Spinner-body">
-          <div className="Spinner-outer-wheel">
-            <div className="Spinner-inner-wheel" id="spinnerWheel">
-                <div className = "Spinner-outer-segment g1" id="game-1">
-                  <div className = "Spinner-inner-segment">Rainbow Six Siege</div>
-                </div>
-                <div className = "Spinner-outer-segment g2" id="game-2">
-                  <div className = "Spinner-inner-segment">Rocket League</div>
-                </div>
-                <div className = "Spinner-outer-segment g3" id="game-3">
-                  <div className = "Spinner-inner-segment">Jackbox.tv</div>
-                </div>
-                <div className = "Spinner-outer-segment g4" id="game-4">
-                  <div className = "Spinner-inner-segment">Golf With Your Friends</div>
-                </div>
-            </div>
-            <div className = "Spinner-dial" id="Spinner-dial"><p>Spin</p></div>
-          </div>
-        </div>
-        <div className="Spinner-button">
-        <button onClick={spin}>Click me</button>
-        </div>
-      </div>
-    );
-    function spin() {
-      var totalDegrees = 7200;
-      var spinDegrees =+ (Math.random() * (totalDegrees - 1 + 1) + 1);
-      console.log(spinDegrees);
+import Header from './components/Header/Header';
+import Spinner from './components/Spinner/Spinner';
+import Button from './components/Button/Button';
 
-      var wheel = document.getElementById('Spinner-dial');
-      wheel.style.transform = 'rotate(' + spinDegrees + 'deg)';
-      console.log('All working ok');
-    };
-  }
+class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			degrees: 0,
+		};
+		this.spin = this.spin.bind(this);
+	}
+	spin() {
+		var totalDegrees = 1800;
+		this.setState( ({ degrees }) => {
+			// var degreesUnder360 = degrees % 360;
+			var spinDegrees = (Math.random() * (totalDegrees - 1 + 1) + 1);
+			console.log('degrees', degrees, spinDegrees);
+			return {degrees: degrees + spinDegrees};
+		} );
+	}
+	render() {
+		const { degrees } = this.state;
+		return (
+			<div id="App">
+				<Header>
+					<h1>What do you want to play?</h1>
+				</Header>
+				<Spinner degrees={degrees}></Spinner>
+				<Button onClick={this.spin}>
+					Click me Daddy
+				</Button>
+			</div>
+		);
+	}
 }
 
 export default App;
