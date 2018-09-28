@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const SpinnerComponent = styled.div`
+	display: inline-block;
 
 	.Spinner-outer-wheel {
 	  border: 1px solid black;
@@ -37,35 +38,23 @@ const SpinnerComponent = styled.div`
 	}
 
 	.Spinner-outer-segment:first-child {
-	  transform: rotate(0deg) skewY(0);
+		background-color: #00a8b5;
+		transform: rotate(0deg) skewY(0);
 	}
 
 	.Spinner-outer-segment:nth-child(2) {
-	  transform: rotate(90deg) skewY(0);
+		background-color: #774898;
+		transform: rotate(90deg) skewY(0);
 	}
 
 	.Spinner-outer-segment:nth-child(3) {
-	  transform: rotate(180deg) skewY(0);
+		background-color: #e62a76;
+		transform: rotate(180deg) skewY(0);
 	}
 
 	.Spinner-outer-segment:nth-child(4) {
-	  transform: rotate(270deg) skewY(0);
-	}
-
-	.g1 {
-	  background-color: #00a8b5;
-	}
-
-	.g2 {
-	  background-color: #774898;
-	}
-
-	.g3 {
-	  background-color: #e62a76;
-	}
-
-	.g4 {
-	  background-color: #fbb901;
+		background-color: #fbb901;
+		transform: rotate(270deg) skewY(0);
 	}
 
 `;
@@ -74,7 +63,6 @@ export const SpinnerDialComponent = styled.div`
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	border-bottom: 50px solid white;
-	color: black;
 	height: 0;
 	position: absolute;
 	left: 125px;

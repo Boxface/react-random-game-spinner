@@ -6,6 +6,7 @@ const HeaderComponent = styled.header`
 	flex-basis: 100%;
 	height: 50px;
 	padding: 20px;
+	margin-bottom: 30px;
 
 	h1 {
 		font-size: 1.5em;

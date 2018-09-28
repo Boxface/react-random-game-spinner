@@ -5,7 +5,6 @@ const ButtonComponent = styled.button`
 	border: 1px solid black;
 	border-radius: 10px;
 	padding: 5px;
-	margin: 25px;
 `;
 
 export default ButtonComponent;

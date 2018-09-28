@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Button from './components/Button/Button';
+import Container from './components/Container/Container';
 import Header from './components/Header/Header';
 import Spinner from './components/Spinner/Spinner';
-import Button from './components/Button/Button';
 
 class App extends Component {
 	constructor() {
@@ -27,12 +28,16 @@ class App extends Component {
 		return (
 			<div id="App">
 				<Header>
-					<h1>What do you want to play?</h1>
+					<h1>What will you be playing today?</h1>
 				</Header>
-				<Spinner degrees={degrees}></Spinner>
-				<Button onClick={this.spin}>
-					Click me Daddy
-				</Button>
+				<Container>
+					<Spinner degrees={degrees}></Spinner>
+				</Container>
+				<Container>
+					<Button onClick={this.spin}>
+						Click me Daddy
+					</Button>
+				</Container>
 			</div>
 		);
 	}
