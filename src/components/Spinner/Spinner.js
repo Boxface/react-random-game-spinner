@@ -1,26 +1,26 @@
 import React from 'react';
 
-import SpinnerComponent, {SpinnerDialComponent} from './Spinner.styles';
+import SpinnerComponent, {SpinnerOuterWheel, SpinnerInnerWheel, SpinnerWedge, SpinnerInnerWedge, SpinnerDial } from './Spinner.styles';
 
 const Spinner = ( {degrees} ) => (
 	<SpinnerComponent>
-	  <div className="Spinner-outer-wheel">
-		<div className="Spinner-inner-wheel">
-			<div className = "Spinner-outer-segment g1">
-			  <div className = "Spinner-inner-segment">Rainbow Six Siege</div>
-			</div>
-			<div className = "Spinner-outer-segment g2">
-			  <div className = "Spinner-inner-segment">Rocket League</div>
-			</div>
-			<div className = "Spinner-outer-segment g3">
-			  <div className = "Spinner-inner-segment">Jackbox.tv</div>
-			</div>
-			<div className = "Spinner-outer-segment g4">
-			  <div className = "Spinner-inner-segment">Golf With Your Friends</div>
-			</div>
-		</div>
-		<SpinnerDialComponent degrees={degrees}></SpinnerDialComponent>
-	  </div>
+		<SpinnerOuterWheel>
+			<SpinnerInnerWheel>
+				<SpinnerWedge>
+					<SpinnerInnerWedge>Rainbow Six Siege</SpinnerInnerWedge>
+				</SpinnerWedge>
+				<SpinnerWedge>
+					<SpinnerInnerWedge>Rocket League</SpinnerInnerWedge>
+				</SpinnerWedge>
+				<SpinnerWedge>
+					<SpinnerInnerWedge>Jackbox TV</SpinnerInnerWedge>
+				</SpinnerWedge>
+				<SpinnerWedge>
+					<SpinnerInnerWedge>Golf With Friends</SpinnerInnerWedge>
+				</SpinnerWedge>
+			</SpinnerInnerWheel>
+			<SpinnerDial degrees={degrees}></SpinnerDial>
+		</SpinnerOuterWheel>
 	</SpinnerComponent>
 );
 
