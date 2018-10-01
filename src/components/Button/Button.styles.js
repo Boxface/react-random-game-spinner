@@ -35,6 +35,10 @@ const ButtonComponent = styled.button`
 		opacity: 1;
 	}
 
+	&:focus {		
+		outline: 0;
+	}
+
 `;
 
 export default ButtonComponent;

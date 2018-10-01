@@ -35,7 +35,7 @@ class App extends Component {
 				</Container>
 				<Container>
 					<Button onClick={this.spin}>
-						Click me Daddy
+						Click me thrice
 					</Button>
 				</Container>
 			</div>
