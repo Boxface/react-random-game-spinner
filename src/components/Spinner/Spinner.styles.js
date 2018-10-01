@@ -7,10 +7,10 @@ const SpinnerComponent = styled.div`
 export const SpinnerOuterWheel = styled.div`
 	border: 1px solid black;
 	border-radius: 50%;
-	height: 300px;
+	height: 500px;
 	position: relative;
 	overflow: hidden;
-	width: 300px;
+	width: 500px;
 `;
 
 export const SpinnerInnerWheel = styled.div`
@@ -79,7 +79,7 @@ export const SpinnerDial = styled.div`
 		height: 25px;
 		left: -25px;
 		position: absolute;
-		top: 50px;
+		top: 49px;
 		width: 50px;
 		z-index: 3;
 	}
