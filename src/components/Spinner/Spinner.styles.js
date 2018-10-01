@@ -64,8 +64,8 @@ export const SpinnerDial = styled.div`
 	border-bottom: 50px solid white;
 	height: 0;
 	position: absolute;
-	left: 125px;
-	top: 100px;
+	left: 225px;
+	top: 200px;
 	transform: rotate(${props => props.degrees}deg);
 	transform-origin: bottom center;
 	transition: all 6s ease;
