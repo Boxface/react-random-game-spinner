@@ -38,7 +38,7 @@ export const SpinnerWedge = styled.div`
 	}
 
 	&:nth-child(3) {
-		background-color: #D5BBB1;
+		background-color: #ED254E;
 		transform: rotate(180deg) skewY(0);
 	}
 
