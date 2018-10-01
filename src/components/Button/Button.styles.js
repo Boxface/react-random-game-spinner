@@ -35,7 +35,7 @@ const ButtonComponent = styled.button`
 		opacity: 1;
 	}
 
-	&:focus {		
+	&:focus {
 		outline: 0;
 	}
 

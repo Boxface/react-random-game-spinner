@@ -19,6 +19,7 @@ export const SpinnerInnerWheel = styled.div`
 `;
 
 export const SpinnerWedge = styled.div`
+	color: #353535;
 	height: 50%;
 	position: absolute;
 	right: 0;
@@ -27,28 +28,28 @@ export const SpinnerWedge = styled.div`
 	transform-origin: 0% 100%;
 
 	&:first-child {
-		background-color: #00a8b5;
+		background-color: #5AAA95;
 		transform: rotate(0deg) skewY(0);
 	}
 
 	&:nth-child(2) {
-		background-color: #774898;
+		background-color: #FFC857;
 		transform: rotate(90deg) skewY(0);
 	}
 
 	&:nth-child(3) {
-		background-color: #e62a76;
+		background-color: #D5BBB1;
 		transform: rotate(180deg) skewY(0);
 	}
 
 	&:nth-child(4) {
-		background-color: #fbb901;
+		background-color: #65DEF1;
 		transform: rotate(270deg) skewY(0);
 	}
 `;
 
 export const SpinnerInnerWedge = styled.div`
-	font-size: 0.7em;
+	font-size: 1em;
 	position: absolute;
 	height: 200%;
 	left: -100%;
