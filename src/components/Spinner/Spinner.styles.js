@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
 const SpinnerComponent = styled.div`
-	display: inline-block;
+	display: block;
+	padding-top: 100%;
+	position: relative;
 `;
 
 export const SpinnerOuterWheel = styled.div`
 	border: 1px solid black;
 	border-radius: 50%;
-	height: 500px;
-	position: relative;
+	height: 100%;
+	left: 0;
+	position: absolute;
 	overflow: hidden;
-	width: 500px;
+	top: 0;
+	width: 100%;
 `;
 
 export const SpinnerInnerWheel = styled.div`
@@ -52,7 +56,7 @@ export const SpinnerInnerWedge = styled.div`
 	font-size: 1em;
 	position: absolute;
 	height: 200%;
-	left: -100%;
+	left: -105%;
 	padding-top: 25px;
 	text-align: center;
 	transform: skewY(0) rotate(45deg);
@@ -65,8 +69,10 @@ export const SpinnerDial = styled.div`
 	border-bottom: 50px solid white;
 	height: 0;
 	position: absolute;
-	left: 225px;
-	top: 200px;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -50px;
+	top: 50%;
 	transform: rotate(${props => props.degrees}deg);
 	transform-origin: bottom center;
 	transition: all 6s ease;
