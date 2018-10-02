@@ -5,7 +5,7 @@ import SpinnerComponent, {SpinnerOuterWheel, SpinnerInnerWheel, SpinnerWedge, Sp
 const Spinner = ( {degrees} ) => (
 	<SpinnerComponent>
 		<SpinnerOuterWheel>
-			<SpinnerInnerWheel>
+			<SpinnerInnerWheel degrees={degrees}>
 				<SpinnerWedge>
 					<SpinnerInnerWedge>Rainbow Six Siege</SpinnerInnerWedge>
 				</SpinnerWedge>
@@ -19,7 +19,7 @@ const Spinner = ( {degrees} ) => (
 					<SpinnerInnerWedge>Golf With Friends</SpinnerInnerWedge>
 				</SpinnerWedge>
 			</SpinnerInnerWheel>
-			<SpinnerDial degrees={degrees}></SpinnerDial>
+			<SpinnerDial></SpinnerDial>
 		</SpinnerOuterWheel>
 	</SpinnerComponent>
 );

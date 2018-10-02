@@ -15,10 +15,10 @@ class App extends Component {
 		this.spin = this.spin.bind(this);
 	}
 	spin() {
-		var totalDegrees = 1800;
+		var totalDegrees = 800;
 		this.setState( ({ degrees }) => {
 			// var degreesUnder360 = degrees % 360;
-			var spinDegrees = (Math.random() * (totalDegrees - 1 + 1) + 1);
+			var spinDegrees = (Math.random() * (totalDegrees - 1 + 1) + 1) + 1000;
 			console.log('degrees', degrees, spinDegrees);
 			return {degrees: degrees + spinDegrees};
 		} );

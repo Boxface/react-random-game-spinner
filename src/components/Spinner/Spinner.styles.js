@@ -20,6 +20,9 @@ export const SpinnerOuterWheel = styled.div`
 export const SpinnerInnerWheel = styled.div`
 	height: 100%;
 	width: 100%;
+	transform: rotate(${props => props.degrees}deg);
+	transform-origin: center center;
+	transition: all 6s ease;
 `;
 
 export const SpinnerWedge = styled.div`
@@ -73,9 +76,6 @@ export const SpinnerDial = styled.div`
 	margin-left: -25px;
 	margin-top: -50px;
 	top: 50%;
-	transform: rotate(${props => props.degrees}deg);
-	transform-origin: bottom center;
-	transition: all 6s ease;
 	width: 0;
 	z-index: 2;
 
