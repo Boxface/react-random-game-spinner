@@ -11,27 +11,36 @@ class App extends Component {
 		super();
 		this.state = {
 			degrees: 0,
+			spinnerActive: false,
 		};
 		this.spin = this.spin.bind(this);
 	}
 	spin() {
 		var totalDegrees = 800;
 		this.setState( ({ degrees }) => {
-			// var degreesUnder360 = degrees % 360;
 			var spinDegrees = (Math.random() * (totalDegrees - 1 + 1) + 1) + 1000;
 			console.log('degrees', degrees, spinDegrees);
-			return {degrees: degrees + spinDegrees};
+			return {degrees: degrees + spinDegrees, spinnerActive: true};
 		} );
+		this.cleanUp();
+	}
+	cleanUp() {
+		clearTimeout( this.timeout);
+		this.timeout = setTimeout(() => {
+			this.setState({
+				spinnerActive: false,
+			});
+		}, 6000);
 	}
 	render() {
-		const { degrees } = this.state;
+		const { degrees, spinnerActive } = this.state;
 		return (
 			<div id="App">
 				<Header>
 					<h1>What will you be playing today?</h1>
 				</Header>
 				<Container>
-					<Spinner degrees={degrees}></Spinner>
+					<Spinner spinnerActive={spinnerActive} degrees={degrees}></Spinner>
 				</Container>
 				<Container>
 					<Button onClick={this.spin}>

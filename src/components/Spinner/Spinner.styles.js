@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const SpinnerComponent = styled.div`
 	display: block;
@@ -17,7 +17,25 @@ export const SpinnerOuterWheel = styled.div`
 	width: 100%;
 `;
 
+const blur = keyframes`
+	0% {
+		filter: blur(0px);
+	}
+	20% {
+		filter: blur(7px);
+	}
+	50% {
+		filter: blur(10px);
+	}
+	100% {
+		filter: blur(0px);
+	}
+`;
+
 export const SpinnerInnerWheel = styled.div`
+	${props => props.spinnerActive && `
+		animation: ${blur} 6s linear infinite;
+	`}
 	height: 100%;
 	width: 100%;
 	transform: rotate(${props => props.degrees}deg);
@@ -57,6 +75,7 @@ export const SpinnerWedge = styled.div`
 
 export const SpinnerInnerWedge = styled.div`
 	font-size: 1em;
+	font-weight: bold;
 	position: absolute;
 	height: 200%;
 	left: -105%;

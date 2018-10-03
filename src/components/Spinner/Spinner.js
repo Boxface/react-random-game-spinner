@@ -2,10 +2,10 @@ import React from 'react';
 
 import SpinnerComponent, {SpinnerOuterWheel, SpinnerInnerWheel, SpinnerWedge, SpinnerInnerWedge, SpinnerDial } from './Spinner.styles';
 
-const Spinner = ( {degrees} ) => (
+const Spinner = ( {degrees, spinnerActive} ) => (
 	<SpinnerComponent>
 		<SpinnerOuterWheel>
-			<SpinnerInnerWheel degrees={degrees}>
+			<SpinnerInnerWheel spinnerActive={spinnerActive} degrees={degrees}>
 				<SpinnerWedge>
 					<SpinnerInnerWedge>Rainbow Six Siege</SpinnerInnerWedge>
 				</SpinnerWedge>
