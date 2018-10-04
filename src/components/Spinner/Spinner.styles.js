@@ -7,6 +7,8 @@ const SpinnerComponent = styled.div`
 `;
 
 export const SpinnerOuterWheel = styled.div`
+	box-shadow: 0px 0px 10px 5px black inset;
+	border: 1px solid black;
 	border-radius: 50%;
 	height: 100%;
 	left: 0;
@@ -46,11 +48,13 @@ export const SpinnerInnerWheel = styled.div`
 `;
 
 export const SpinnerWedge = styled.div`
+	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3), 0px 0px 10px 6px rgba(0,0,0,0.3) inset, 0px 0px 15px 10px rgba(0,0,0,0.1) inset;
+	border: 0.8px solid rgba(0,0,0,0.6);
 	color: #353535;
 	height: 50%;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: -1px;
+	top: -2px;
 	width: 50%;
 	transform-origin: 0% 100%;
 
@@ -88,9 +92,11 @@ export const SpinnerInnerWedge = styled.div`
 `;
 
 export const SpinnerDial = styled.div`
+	box-shadow: 10px 10px 2px 2px rgba(0,0,0,0.6) inset;
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	border-bottom: 50px solid white;
+	filter: drop-shadow(3px 1px 4px rgba(0,0,0,0.6));
 	height: 0;
 	position: absolute;
 	left: 50%;
