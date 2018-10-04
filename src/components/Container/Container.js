@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ContainerComponent from './Container.styles';
+import ContainerComponent, {ContainerInner} from './Container.styles';
 
 const Container = ({ children }) => (
 	<ContainerComponent>
-		{children}
+		<ContainerInner>
+			{children}
+		</ContainerInner>
 	</ContainerComponent>
 );
 

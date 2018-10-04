@@ -5,4 +5,9 @@ const ContainerComponent = styled.div`
 	width: 90%;
 `;
 
+export const ContainerInner = styled.div `
+	margin: 0 auto;
+	max-width: 650px;
+`;
+
 export default ContainerComponent;

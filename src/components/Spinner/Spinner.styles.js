@@ -7,7 +7,6 @@ const SpinnerComponent = styled.div`
 `;
 
 export const SpinnerOuterWheel = styled.div`
-	border: 1px solid black;
 	border-radius: 50%;
 	height: 100%;
 	left: 0;
@@ -26,6 +25,9 @@ const blur = keyframes`
 	}
 	50% {
 		filter: blur(10px);
+	}
+	70% {
+		filter: blur(3px);
 	}
 	100% {
 		filter: blur(0px);
