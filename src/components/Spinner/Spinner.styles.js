@@ -49,7 +49,6 @@ export const SpinnerInnerWheel = styled.div`
 
 export const SpinnerWedge = styled.div`
 	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3), 0px 0px 10px 6px rgba(0,0,0,0.3) inset, 0px 0px 15px 10px rgba(0,0,0,0.1) inset;
-	border: 0.8px solid rgba(0,0,0,0.6);
 	color: #353535;
 	height: 50%;
 	position: absolute;
