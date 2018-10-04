@@ -15,6 +15,19 @@ export const SpinnerOuterWheel = styled.div`
 	overflow: hidden;
 	top: 0;
 	width: 100%;
+
+	&:after {
+		box-shadow: inset 0px 0px 10px 6px rgba(0,0,0,0.3);
+		border-radius: 50%;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		width: 100%;
+		z-index: 50;
+	}
 `;
 
 const blur = keyframes`
@@ -40,6 +53,7 @@ export const SpinnerInnerWheel = styled.div`
 		animation: ${blur} 6s linear infinite;
 	`}
 	height: 100%;
+	position: relative;
 	width: 100%;
 	transform: rotate(${props => props.degrees}deg);
 	transform-origin: center center;
@@ -47,7 +61,7 @@ export const SpinnerInnerWheel = styled.div`
 `;
 
 export const SpinnerWedge = styled.div`
-	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3), 0px 0px 10px 6px rgba(0,0,0,0.3) inset, 0px 0px 15px 10px rgba(0,0,0,0.1) inset;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3), 0px 0px 10px 6px rgba(0,0,0,0.3) inset, 0px 0px 15px 10px rgba(0,0,0,0.1) inset;
 	color: #353535;
 	height: 50%;
 	position: absolute;
@@ -74,7 +88,7 @@ export const SpinnerWedge = styled.div`
 	&:nth-child(4) {
 		background-color: #65DEF1;
 		transform: rotate(270deg) skewY(0);
-	}
+	}*/
 `;
 
 export const SpinnerInnerWedge = styled.div`
