@@ -7,7 +7,6 @@ const SpinnerComponent = styled.div`
 `;
 
 export const SpinnerOuterWheel = styled.div`
-	box-shadow: 0px 0px 10px 5px black inset;
 	border: 1px solid black;
 	border-radius: 50%;
 	height: 100%;
@@ -52,8 +51,8 @@ export const SpinnerWedge = styled.div`
 	color: #353535;
 	height: 50%;
 	position: absolute;
-	right: -1px;
-	top: -2px;
+	right: 0px;
+	top: 0px;
 	width: 50%;
 	transform-origin: 0% 100%;
 
