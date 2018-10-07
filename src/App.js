@@ -44,7 +44,7 @@ class App extends Component {
 				</Container>
 				<Container>
 					<Button onClick={this.spin}>
-						Slap me
+						Spin me
 					</Button>
 				</Container>
 			</div>

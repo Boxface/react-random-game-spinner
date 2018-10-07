@@ -4,7 +4,7 @@ const HeaderComponent = styled.header`
 	background-color: #155e63;
 	color: white;
 	flex-basis: 100%;
-	height: 50px;
+	height: 60px;
 	padding: 20px;
 	margin-bottom: 30px;
 

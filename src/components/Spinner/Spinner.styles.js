@@ -17,7 +17,7 @@ export const SpinnerOuterWheel = styled.div`
 	width: 100%;
 
 	&:after {
-		box-shadow: inset 0px 0px 10px 6px rgba(0,0,0,0.3);
+		box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.4), 0px 0px 30px 10px rgba(0,0,0,0.2);
 		border-radius: 50%;
 		content: '';
 		height: 100%;
@@ -61,7 +61,7 @@ export const SpinnerInnerWheel = styled.div`
 `;
 
 export const SpinnerWedge = styled.div`
-	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3), 0px 0px 10px 6px rgba(0,0,0,0.3) inset, 0px 0px 15px 10px rgba(0,0,0,0.1) inset;
+	box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.3), 0px 0px 30px 10px rgba(0,0,0,0.2), 0px 0px 15px 5px rgba(0,0,0,0.3) inset, 0px 0px 30px 10px rgba(0,0,0,0.2) inset;
 	color: #353535;
 	height: 50%;
 	position: absolute;
